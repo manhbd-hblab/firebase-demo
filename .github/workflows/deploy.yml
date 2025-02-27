@@ -53,9 +53,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Deploy to Firebase Hosting
-        env: 
-          FIREBASE_TOKEN: ${{ secrets.VITE_FIREBASE_TOKEN }}
-        run: |
-          firebase deploy --token "$FIREBASE_TOKEN"
